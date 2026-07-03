@@ -26,8 +26,6 @@ spec:
       - name: mysql
         # image: "mysql:{{ .Values.statefulset.imageVersion }}"
         image: "lingadevops/mysql:{{ .Values.statefulset.imageVersion }}"
-        args:
-        - "--ignore-db-dir=lost+found"
         envFrom:
         - configMapRef:
             name: mysql
